@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donor Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b30000; /* Red background */
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1.lab {
+      color: #762323;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    h2.lab1, h3.lab {
+      color: #b30000;
+      margin-top: 30px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    input[type="reset"] {
+      background-color: #6c757d;
+      margin-left: 10px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="lab">Donor Information</h1>
+  <form>
+    <!-- Basic Info -->
+    <label>* First Name</label>
+    <input type="text" name="firstName" placeholder="Enter your first name" required>
+
+    <label>* Last Name</label>
+    <input type="text" name="lastName" placeholder="Enter your last name" required>
+
+    <label>Company</label>
+    <input type="text" name="company">
+
+    <label>* Address 1</label>
+    <input type="text" name="address1" required>
+
+    <label>Address 2</label>
+    <input type="text" name="address2">
+
+    <label>City</label>
+    <input type="text" name="city">
+
+    <label>State</label>
+    <select name="state">
+      <option value="">Select a State</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Punjab">Punjab</option>
+    </select>
+
+    <label>Zip Code</label>
+    <input type="text" name="zip">
+
+    <label>Country</label>
+    <select name="country">
+      <option value="">Select a Country</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="India">India</option>
+    </select>
+
+    <label>Phone</label>
+    <input type="text" name="phone">
+
+    <label>Fax</label>
+    <input type="text" name="fax">
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <!-- Donation -->
+    <label>Donation Amount</label><br>
+    <input type="radio" name="donation" value="None"> None
+    <input type="radio" name="donation" value="$50"> $50
+    <input type="radio" name="donation" value="$75"> $75
+    <input type="radio" name="donation" value="$100"> $100
+
+    <label>Other Amount $</label>
+    <input type="number" name="otherAmount">
+
+    <label>
+      <input type="checkbox" name="recurring">
+      I am interested in giving on a regular basis.
+    </label>
+
+    <label>Monthly Credit Card $</label>
+    <input type="number" name="monthlyAmount">
+    For <input type="number" name="months"> Months
+
+    <!-- Honorarium -->
+    <h2 class="lab1">Honorarium and Memorial Donation Information</h2>
+    <label>I would like to make this donation:</label><br>
+    <input type="radio" name="tribute" value="Honor"> To Honor
+    <input type="radio" name="tribute" value="Memory"> In Memory Of
+
+    <label>Name</label>
+    <input type="text" name="tributeName">
+
+    <label>Acknowledge Donation to</label>
+    <input type="text" name="acknowledgeTo">
+
+    <label>Address</label>
+    <input type="text" name="ackAddress">
+
+    <label>City</label>
+    <input type="text" name="ackCity">
+
+    <label>State</label>
+    <select name="ackState">
+      <option value="">Select a State</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="India">India</option>
+    </select>
+
+    <label>Zip</label>
+    <input type="text" name="ackZip">
+    <h3 class="lab">Additional Information</h3>
+    <label>Please enter your name, company or organization as you would like it to appear in our publication:</label>
+    <input type="text" name="publicationName">
+
+    <input type="radio" name="privacy" value="anonymous">
+    <label>I would like my gift to remain anonymous</label><br>
+
+    <input type="radio" name="giftProgram" value="matching">
+    <label>My employer offers a matching gift program. I will mail the matching gift form</label><br>
+
+    <input type="radio" name="noAcknowledgement" value="skip">
+    <label>Please save the cost of acknowledging this gift by not mailing a thank you letter</label>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+    <label>How may we contact you?</label><br>
+    <input type="checkbox" name="contactMethod" value="Email"> Email
+    <input type="checkbox" name="contactMethod" value="Postal Mail"> Postal Mail
+    <input type="checkbox" name="contactMethod" value="Telephone"> Telephone
+    <input type="checkbox" name="contactMethod" value="Fax"> Fax
+
+    <label>Newsletter and Volunteering:</label><br>
+    <input type="checkbox" name="newsletter" value="Email"> Receive by Email<br>
+    <input type="checkbox" name="newsletter" value="Postal"> Receive by Postal Mail<br>
+    <input type="checkbox" name="volunteer" value="Yes"> I would like information about volunteering
+
+    <!-- Submit Buttons -->
+    <br>
+    <input type="submit" value="Continue">
+    <input type="reset" value="Reset">
+  </form>
+  "
+
+</body>
+</html>
