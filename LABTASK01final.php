@@ -1,4 +1,3 @@
-<?php
 /* ===========================================================
    PROGRAMMING WITH PHP – ASSESSMENT TASKS (1–8)
    =========================================================== */
@@ -127,4 +126,5 @@ function printFrom2DArray($grid) {
     }
     echo "\n";
 }
+
 printFrom2DArray($grid);
